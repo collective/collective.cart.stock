@@ -1,0 +1,48 @@
+Log in as the portal owner::
+
+    >>> from plone.app.testing import TEST_USER_NAME, TEST_USER_PASSWORD
+    >>> browser.login(TEST_USER_NAME, TEST_USER_PASSWORD)
+
+Go to Földer::
+
+    >>> browser.open('/folder')
+
+Add Stock::
+
+    >>> browser.getLink('Stock').click()
+    >>> browser.getControl(name="form.widgets.IBasic.title").value = 'Stöck1'
+    >>> browser.getControl(name="form.widgets.IBasic.description").value = 'Description of Stöck1'
+    >>> browser.getControl(name="form.widgets.stock").value = '100'
+    >>> browser.getControl(name="form.buttons.save").click()
+
+    >>> print browser.bycss('.documentFirstHeading')
+    --- 1 ---
+    <h1 class="documentFirstHeading">St&#246;ck1</h1>
+
+    >>> print browser.bycss('.documentDescription')
+    --- 1 ---
+    <div class="documentDescription description">Description of St&#246;ck1</div>
+
+    >>> print browser.bycss('#form-widgets-stock')
+    --- 1 ---
+    <span id="form-widgets-stock" class="text-widget required int-field">100</span>
+
+Check that initial_stock is set::
+
+    >>> stock = portal['folder']['collective.cart.stock.stock']
+    >>> stock.initial_stock
+    100
+
+Updating Stock shoud not update the initial_stock::
+
+    >>> url = '{}/edit'.format(stock.absolute_url())
+    >>> browser.open(url)
+    >>> browser.getControl(name="form.widgets.stock").value = '150'
+    >>> browser.getControl(name="form.buttons.save").click()
+
+    >>> print browser.bycss('#form-widgets-stock')
+    --- 1 ---
+    <span id="form-widgets-stock" class="text-widget required int-field">150</span>
+
+    >>> stock.initial_stock
+    100

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+    interface="collective.cart.stock.browser.interfaces.ICollectiveCartStockLayer"
+    name="collective.cart.stock"
+    />
+</layers>

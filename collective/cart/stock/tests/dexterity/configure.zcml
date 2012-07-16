@@ -1,0 +1,23 @@
+<configure
+  xmlns:five="http://namespaces.zope.org/five"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  xmlns:i18n="http://namespaces.zope.org/i18n"
+  xmlns="http://namespaces.zope.org/zope"
+  >
+
+  <include package="plone.app.dexterity"/>
+
+  <genericsetup:registerProfile
+    name="default"
+    title="collective.cart.stock.dexterity"
+    directory="profiles/default"
+    description="Installs the collective.cart.stock dexterity test content type where collective.cart.stock.Stock can be added."
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+  <permission
+    id="collective.cart.stock.AddFolder"
+    title="collective.cart.stock: Add Folder"
+    />
+
+</configure>
