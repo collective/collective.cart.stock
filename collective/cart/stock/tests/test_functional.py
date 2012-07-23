@@ -2,6 +2,8 @@
 from collective.cart.stock.tests.base import FUNCTIONAL_TESTING
 from hexagonit.testing.browser import Browser
 from plone.app.testing import TEST_USER_ID
+from plone.app.testing import TEST_USER_NAME
+from plone.app.testing import TEST_USER_PASSWORD
 from plone.app.testing import setRoles
 from plone.dexterity.utils import createContentInContainer
 from plone.testing import layered
@@ -26,13 +28,15 @@ CHECKER = renormalizing.RENormalizing([
 
 def setUp(self):
     layer = self.globs['layer']
+    portal = layer['portal']
     # Update global variables within the tests.
     self.globs.update({
-        'portal': layer['portal'],
+        'portal': portal,
         'browser': Browser(layer['app']),
+        'TEST_USER_NAME': TEST_USER_NAME,
+        'TEST_USER_PASSWORD': TEST_USER_PASSWORD,
     })
 
-    portal = self.globs['portal']
     browser = self.globs['browser']
     browser.setBaseUrl(portal.absolute_url())
 

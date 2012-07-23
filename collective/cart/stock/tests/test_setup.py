@@ -69,7 +69,7 @@ class TestCase(IntegrationTestCase):
     def test_types__collective_cart_stock_Stock__content_icon(self):
         types = getToolByName(self.portal, 'portal_types')
         ctype = types.getTypeInfo('collective.cart.stock.Stock')
-        self.assertEqual(ctype.getIcon(), '++resource++collective.cart.stock/article.png')
+        self.assertEqual(ctype.getIcon(), '++resource++collective.cart.stock/stock.png')
 
     def test_types__collective_cart_stock_Stock__allow_discussion(self):
         types = getToolByName(self.portal, 'portal_types')
@@ -163,7 +163,7 @@ class TestCase(IntegrationTestCase):
         types = getToolByName(self.portal, 'portal_types')
         ctype = types.getTypeInfo('collective.cart.stock.Stock')
         action = ctype.getActionObject('object/view')
-        self.assertEqual(action.permissions, (u'View',))
+        self.assertEqual(action.permissions, (u'Modify portal content',))
 
     def test_types__collective_cart_stock_Stock__action__edit__title(self):
         types = getToolByName(self.portal, 'portal_types')
@@ -194,6 +194,10 @@ class TestCase(IntegrationTestCase):
         ctype = types.getTypeInfo('collective.cart.stock.Stock')
         action = ctype.getActionObject('object/edit')
         self.assertEqual(action.permissions, (u'Modify portal content',))
+
+    def test_workflow__context_cart_stock_Stock(self):
+        workflow = getToolByName(self.portal, 'portal_workflow')
+        self.assertEqual(workflow.getChainForPortalType('collective.cart.stock.Stock'), ())
 
     def test_uninstall__package(self):
         installer = getToolByName(self.portal, 'portal_quickinstaller')

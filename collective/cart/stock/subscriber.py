@@ -11,5 +11,5 @@ logger = logging.getLogger(__name__)
 def set_initial_stock(context, event):
     assert context == event.object
     setattr(context, 'initial_stock', context.stock)
-    message = 'Set initial_stock for {}'.format(context.id)
+    message = 'Set initial_stock to {}'.format(context.stock)
     logger.info(message)

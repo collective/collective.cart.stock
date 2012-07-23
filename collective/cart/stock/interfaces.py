@@ -8,5 +8,4 @@ class IStock(form.Schema):
 
     stock = Int(
         title=_('Stock'),
-        description=_('Set the initial stock here.'),
-        min=0)
+        description=_('Set the initial stock here.'))
