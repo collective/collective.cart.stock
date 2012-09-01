@@ -1,7 +1,9 @@
-*.backup
 *.egg-info
 *.mo
 *.pyc
+*.pyo
+*~
+.DS_Store
 .long-description.html
-.svn
+collective/cart/stock/docs/_build/*
 dist

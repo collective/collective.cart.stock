@@ -28,7 +28,7 @@ Add Stock::
 
 Check that initial_stock is set::
 
-    >>> stock = portal['folder']['collective.cart.stock.stock']
+    >>> stock = portal['folder']['collective-cart-stock-stock']
     >>> stock.initial_stock
     100
 

@@ -1,12 +1,19 @@
 from setuptools import find_packages
 from setuptools import setup
+import os
+
+
+long_description = (
+    open(os.path.join("collective", "cart", "stock", "docs", "README.rst")).read() + "\n" +
+    open(os.path.join("collective", "cart", "stock", "docs", "HISTORY.rst")).read() + "\n" +
+    open(os.path.join("collective", "cart", "stock", "docs", "CONTRIBUTORS.rst")).read())
 
 
 setup(
     name='collective.cart.stock',
     version='0.0',
-    description="Make folderish plone object stock site.",
-    long_description='',
+    description="Adds stock content type.",
+    long_description=long_description,
     classifiers=[
         "Framework :: Plone",
         "Framework :: Plone :: 4.2",
