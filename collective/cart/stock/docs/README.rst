@@ -1,6 +1,6 @@
-=========================
+=====================
 collective.cart.stock
-=========================
+=====================
 
 collective.cart.stock adds stock content type for stocking articles.
 
