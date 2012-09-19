@@ -1,6 +1,7 @@
 from collective.cart.stock.interfaces import IStock
 from five import grok
 from zope.lifecycleevent.interfaces import IObjectCreatedEvent
+
 import logging
 
 

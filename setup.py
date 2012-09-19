@@ -1,5 +1,6 @@
 from setuptools import find_packages
 from setuptools import setup
+
 import os
 
 
@@ -43,4 +44,4 @@ setup(
 
     [z3c.autoinclude.plugin]
     target = plone
-    """,)
+    """)
