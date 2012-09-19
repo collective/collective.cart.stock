@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-08-17 06:33+0000\n"
+"POT-Creation-Date: 2012-09-19 13:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,3 +13,13 @@ msgstr ""
 "Language-Name: Finnish\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.cart.stock\n"
+
+#: ./interfaces.py:11
+msgid "Set the initial stock here."
+msgstr "Laita alkuvarasto tähän."
+
+#: ./interfaces.py:10
+#: ./profiles/default/types/collective.cart.stock.Stock.xml
+msgid "Stock"
+msgstr "Varasto"
+
