@@ -12,7 +12,7 @@ long_description = (
 
 setup(
     name='collective.cart.stock',
-    version='0.1',
+    version='0.2',
     description="Adds stock content type.",
     long_description=long_description,
     classifiers=[
