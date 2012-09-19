@@ -4,7 +4,7 @@ collective.cart.stock
 
 collective.cart.stock adds stock content type for stocking articles.
 
-Currently Tested with
+Currently tested with
 ---------------------
 
 * Plone-4.2.1 [taito]
