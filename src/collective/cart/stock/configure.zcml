@@ -6,7 +6,8 @@
   xmlns:i18n="http://namespaces.zope.org/i18n"
   xmlns="http://namespaces.zope.org/zope">
 
-  <includeDependencies package="." />
+  <include package="five.grok"/>
+  <include package="plone.app.dexterity"/>
   <grok:grok package="." />
   <i18n:registerTranslations directory="locales" />
 

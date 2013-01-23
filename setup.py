@@ -5,9 +5,9 @@ import os
 
 
 long_description = (
-    open(os.path.join("collective", "cart", "stock", "docs", "README.rst")).read() + "\n" +
-    open(os.path.join("collective", "cart", "stock", "docs", "HISTORY.rst")).read() + "\n" +
-    open(os.path.join("collective", "cart", "stock", "docs", "CONTRIBUTORS.rst")).read())
+    open(os.path.join("src", "collective", "cart", "stock", "docs", "README.rst")).read() + "\n" +
+    open(os.path.join("src", "collective", "cart", "stock", "docs", "HISTORY.rst")).read() + "\n" +
+    open(os.path.join("src", "collective", "cart", "stock", "docs", "CONTRIBUTORS.rst")).read())
 
 
 setup(
@@ -18,7 +18,6 @@ setup(
     classifiers=[
         "Framework :: Plone",
         "Framework :: Plone :: 4.2",
-        "Framework :: Plone :: 4.3",
         "License :: OSI Approved :: BSD License",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7"],
@@ -27,7 +26,8 @@ setup(
     author_email='taito.horiuchi@gmail.com',
     url='https://github.com/collective/collective.cart.stock/',
     license='BSD',
-    packages=find_packages(exclude=['ez_setup']),
+    packages=find_packages('src', exclude=['ez_setup']),
+    package_dir={'': 'src'},
     namespace_packages=['collective', 'collective.cart'],
     include_package_data=True,
     zip_safe=False,
@@ -35,10 +35,8 @@ setup(
         'five.grok',
         'hexagonit.testing',
         'plone.app.dexterity',
-        'plone.browserlayer',
         'plone.directives.form',
-        'setuptools',
-        'zope.i18nmessageid'],
+        'setuptools'],
     entry_points="""
     # -*- Entry points: -*-
 

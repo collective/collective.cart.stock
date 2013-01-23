@@ -10,7 +10,6 @@ logger = logging.getLogger(__name__)
 
 @grok.subscribe(IStock, IObjectCreatedEvent)
 def set_initial_stock(context, event):
-    assert context == event.object
     setattr(context, 'initial_stock', context.stock)
     message = 'Set initial_stock to {}'.format(context.stock)
     logger.info(message)

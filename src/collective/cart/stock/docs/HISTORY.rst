@@ -1,6 +1,12 @@
 Change log
 ----------
 
+0.3 (2013-01-23)
+================
+
+- Fixed subscriber while pasting stock. [taito]
+- Integrated Travis CI. [taito]
+
 0.2 (2012-09-19)
 ================
 

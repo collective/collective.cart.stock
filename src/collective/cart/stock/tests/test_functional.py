@@ -45,9 +45,8 @@ def setUp(self):
     setRoles(portal, TEST_USER_ID, ['Manager'])
 
     # Create CFolder under portal.
-    folder = createContentInContainer(
-            portal, 'collective.cart.stock.Folder', id='folder',
-            title='Földer', description='Description of Földer')
+    folder = createContentInContainer(portal, 'collective.cart.stock.Folder', id='folder',
+        title='Földer', description='Description of Földer')
     modified(folder)
 
     transaction.commit()
@@ -79,6 +78,4 @@ def DocFileSuite(testfile, flags=FLAGS, setUp=setUp, layer=FUNCTIONAL_TESTING):
 
 
 def test_suite():
-    return unittest.TestSuite([
-        DocFileSuite('functional/browser.txt'),
-        ])
+    return unittest.TestSuite([DocFileSuite('functional/browser.txt')])
