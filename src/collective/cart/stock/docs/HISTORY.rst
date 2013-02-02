@@ -1,6 +1,11 @@
 Change log
 ----------
 
+0.4 (2013-02-02)
+================
+
+- Added finnish translation for domain: plone.dexterity.
+
 0.3 (2013-01-23)
 ================
 
