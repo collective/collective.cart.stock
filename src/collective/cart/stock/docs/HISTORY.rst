@@ -1,7 +1,7 @@
 Changelog
 ---------
 
-0.4.0.1 (2013-04-xx)
+0.4.0.1 (2013-04-17)
 ====================
 
 - Moved test packages to extras_require. [taito]
