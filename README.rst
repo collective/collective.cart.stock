@@ -1,1 +1,10 @@
-See `src/collective/cart/stock/docs/README.rst <https://github.com/collective/collective.cart.stock/blob/master/src/collective/cart/stock/docs/README.rst>`_
+=====================
+collective.cart.stock
+=====================
+
+collective.cart.stock adds stock content type for stocking articles.
+
+Currently tested with
+---------------------
+
+* Plone-4.3 with Python-2.7.x [taito]

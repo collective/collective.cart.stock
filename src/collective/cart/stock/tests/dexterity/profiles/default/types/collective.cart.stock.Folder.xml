@@ -19,7 +19,7 @@
   </property>
 
   <!-- Schema, class and security -->
-  <property name="schema">collective.cart.stock.tests.dexterity.folder.ICFolder</property>
+  <property name="schema">collective.cart.stock.tests.dexterity.folder.FolderSchema</property>
   <property name="klass">plone.dexterity.content.Container</property>
   <property name="add_permission">collective.cart.stock.AddFolder</property>
 

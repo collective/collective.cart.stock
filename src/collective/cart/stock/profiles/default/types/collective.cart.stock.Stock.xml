@@ -18,8 +18,9 @@
   </property>
 
   <!-- Schema, class and security -->
-  <property name="schema">collective.cart.stock.interfaces.IStock</property>
-  <property name="klass">plone.dexterity.content.Container</property>
+  <property name="schema">collective.cart.stock.schema.StockSchema</property>
+  <!-- <property name="klass">plone.dexterity.content.Container</property> -->
+  <property name="klass">collective.cart.stock.content.Stock</property>
   <property name="add_permission">collective.cart.stock.AddStock</property>
 
   <!-- enabled behaviors -->

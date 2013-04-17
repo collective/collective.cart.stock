@@ -1,0 +1,13 @@
+<configure
+  i18n_domain="collective.cart.stock"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:i18n="http://namespaces.zope.org/i18n"
+  xmlns="http://namespaces.zope.org/zope">
+
+  <browser:resourceDirectory
+    name="collective.cart.stock"
+    directory="static"
+    layer=".interfaces.ICollectiveCartStockLayer"
+    />
+
+</configure>

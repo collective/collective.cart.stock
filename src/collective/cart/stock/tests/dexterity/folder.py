@@ -1,14 +1,5 @@
-from five import grok
-from plone.directives import form
+from plone.supermodel.model import Schema
 
 
-class ICFolder(form.Schema):
-    """Container for Testing."""
-
-
-class View(grok.View):
-    """Default view for page."""
-
-    grok.context(ICFolder)
-    grok.require('zope2.View')
-    grok.name('view')
+class FolderSchema(Schema):
+    """Schema for test folder"""

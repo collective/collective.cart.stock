@@ -5,9 +5,9 @@ import os
 
 
 long_description = (
-    open(os.path.join("src", "collective", "cart", "stock", "docs", "README.rst")).read() + "\n" +
+    open(os.path.join("README.rst")).read() + "\n" +
     open(os.path.join("src", "collective", "cart", "stock", "docs", "HISTORY.rst")).read() + "\n" +
-    open(os.path.join("src", "collective", "cart", "stock", "docs", "CONTRIBUTORS.rst")).read())
+    open(os.path.join("src", "collective", "cart", "stock", "docs", "CREDITS.rst")).read())
 
 
 setup(
@@ -32,11 +32,9 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'five.grok',
-        'hexagonit.testing',
         'plone.app.dexterity',
-        'plone.directives.form',
         'setuptools'],
+    extras_require={'test': ['hexagonit.testing']},
     entry_points="""
     # -*- Entry points: -*-
 

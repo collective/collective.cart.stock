@@ -5,5 +5,4 @@
 *~
 .DS_Store
 .long-description.html
-collective/cart/stock/docs/_build/*
 dist

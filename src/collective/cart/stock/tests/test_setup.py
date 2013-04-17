@@ -94,12 +94,17 @@ class TestCase(IntegrationTestCase):
     def test_types__collective_cart_stock_Stock__schema(self):
         types = getToolByName(self.portal, 'portal_types')
         ctype = types.getTypeInfo('collective.cart.stock.Stock')
-        self.assertEqual(ctype.schema, 'collective.cart.stock.interfaces.IStock')
+        self.assertEqual(ctype.schema, 'collective.cart.stock.schema.StockSchema')
+
+    # def test_types__collective_cart_stock_Stock__klass(self):
+    #     types = getToolByName(self.portal, 'portal_types')
+    #     ctype = types.getTypeInfo('collective.cart.stock.Stock')
+    #     self.assertEqual(ctype.klass, 'plone.dexterity.content.Container')
 
     def test_types__collective_cart_stock_Stock__klass(self):
         types = getToolByName(self.portal, 'portal_types')
         ctype = types.getTypeInfo('collective.cart.stock.Stock')
-        self.assertEqual(ctype.klass, 'plone.dexterity.content.Container')
+        self.assertEqual(ctype.klass, 'collective.cart.stock.content.Stock')
 
     def test_types__collective_cart_stock_Stock__add_permission(self):
         types = getToolByName(self.portal, 'portal_types')
