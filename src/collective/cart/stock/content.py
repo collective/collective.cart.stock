@@ -5,5 +5,7 @@ from zope.interface import implements
 
 class Stock(Container):
     """Content type: collective.cart.stock.Stock"""
-
     implements(IStock)
+
+    stock = None
+    initial_stock = None

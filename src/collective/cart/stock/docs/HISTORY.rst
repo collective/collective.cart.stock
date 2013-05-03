@@ -1,6 +1,11 @@
 Changelog
 ---------
 
+0.4.0.2 (2013-05-03)
+====================
+
+- Verified content type: collective.cart.stock.Stock. [taito]
+
 0.4.0.1 (2013-04-17)
 ====================
 
