@@ -24,7 +24,7 @@ Add Stock::
 
     >>> print browser.bycss('#form-widgets-stock')
     --- 1 ---
-    <span id="form-widgets-stock" class="text-widget required int-field">100</span>
+    <span id="form-widgets-stock" class="text-widget int-field">100</span>
 
 Check that initial_stock is set::
 
@@ -41,7 +41,7 @@ Updating Stock shoud not update the initial_stock::
 
     >>> print browser.bycss('#form-widgets-stock')
     --- 1 ---
-    <span id="form-widgets-stock" class="text-widget required int-field">150</span>
+    <span id="form-widgets-stock" class="text-widget int-field">150</span>
 
     >>> stock.initial_stock
     100
